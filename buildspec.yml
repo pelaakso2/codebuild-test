@@ -1,0 +1,36 @@
+version: 0.2
+
+#env:
+#  variables:
+#    key: "value"
+#    key: "value"
+#  parameter-store:
+#    key: "value"
+#    key: "value"
+
+phases:
+  #install:
+  #  commands:
+  #    - command
+  #    - command
+  #  finally:
+  #    - command
+  #    - command
+  pre_build:
+    commands:
+      - echo "Environment is $ENVIRONMENT"
+  build:
+    commands:
+      - mvn clean install
+  #post_build:
+  #  commands:
+  #    - command
+  #    - command
+  #  finally:
+  #    - command
+  #    - command
+artifacts:
+  files:
+    - target/cbdemo-0.0.1-SNAPSHOT.jar
+  #discard-paths: yes
+  #base-directory: location
